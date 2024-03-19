@@ -2,12 +2,12 @@ n = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-def solve(A, B):
+def solve(n, A, B):
     A.sort()
     B.sort()
-    for idx in range(len(A)):
+    for idx in range(n):
         if A[idx] != B[idx]:
             return 'No'
         return 'Yes'
 
-print(solve(A, B))
+print(solve(n, A, B))
