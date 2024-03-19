@@ -8,6 +8,6 @@ def solve(n, A, B):
     for idx in range(n):
         if A[idx] != B[idx]:
             return 'No'
-        return 'Yes'
+    return 'Yes'
 
 print(solve(n, A, B))
