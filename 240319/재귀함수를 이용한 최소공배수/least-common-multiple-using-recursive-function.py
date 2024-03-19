@@ -3,14 +3,7 @@ A = list(map(int, input().split()))
 
 # 2개씩 최소 공배수를 비교하고, 나오면 오른쪽꺼랑 비교하면 될 것 같음.
 def solve(result, n):
-    if n == 0:
-        tmp_a, tmp_b = result, 1
-        while tmp_b != 0:
-            r = tmp_a % tmp_b
-            tmp_a = tmp_b
-            tmp_b = r
-        result = (result * 1) // tmp_a
-        
+    if n < 0:
         return result
 
     tmp_a, tmp_b = result, A[n]
