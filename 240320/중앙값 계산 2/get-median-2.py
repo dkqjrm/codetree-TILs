@@ -1,7 +1,6 @@
 n = int(input())
 
 A_list = list(map(int, input().split()))
-for idx, tmp in enumerate(A_list):
-    
-    if tmp % 2 != 0:
-        print(A_list[idx//2], end=' ')
+for idx in range(n):
+    if (idx + 1) % 2 == 1:
+        print(sorted(A_list[:idx + 1])[((idx)//2)], end=' ')
