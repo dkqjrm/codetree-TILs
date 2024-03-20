@@ -10,7 +10,7 @@ A = map(int, input().split())
 
 numbers = [Number(num = num, idx = idx) for idx, num in enumerate(A, start=1)]
 
-numbers.sort(key = lambda x : x.num)
+numbers.sort(key = lambda x : (x.num, x.idx))
 
 for idx, number in enumerate(numbers, start=1):
     number.moved_idx = idx
