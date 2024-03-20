@@ -1,7 +1,7 @@
 m1, d1, m2, d2 = map(int, input().split())
 A = input()
 
-num_of_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+num_of_days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 # day_of_the_week = {
 #     'Mon' : 1,
 #     'Tue' : 2,
