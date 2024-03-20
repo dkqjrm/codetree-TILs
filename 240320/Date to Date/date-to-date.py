@@ -4,9 +4,9 @@ m1, d1, m2, d2 = map(int, input().split())
 
 total = 0
 for m in range(m1, m2):
-    total += num_of_days[m]
+    total += num_of_days[m-1]
 
-total -= d1
+total -= (d1 - 1)
 total += d2
 
 print(total)
