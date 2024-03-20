@@ -34,7 +34,8 @@ day_of_the_week = {
 
 days = [1, 0, 0, 0, 0, 0, 0]
 
-for i in range(1, second_days - first_days + 2):
+for i in range(1, second_days - first_days + 1):
     days[i % 7] += 1
 
 print(days[day_of_the_week[A]])
+# print(days)
