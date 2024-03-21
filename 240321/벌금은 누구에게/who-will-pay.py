@@ -1,8 +1,6 @@
 n, m, k = map(int, input().split())
-punishments = []
+punishments = [0 for _ in range(n)]
 
-for _ in range(n):
-    punishments.append(0)
 
 check = False
 for _ in range(m):
