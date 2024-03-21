@@ -19,7 +19,7 @@ for idx in range(len(a_list)):
         if winner == 'B':
             cnt += 1
         winner = 'A'
-    else:
+    elif a_list[idx] < b_list[idx]:
         if winner == 'A':
             cnt += 1
         winner = 'B'
