@@ -1,9 +1,9 @@
-OFFSET = 200
+OFFSET = 150000
 
 n = int(input())
 # n = 5
 
-visited = [('BLANK', 0, 0)] * 400
+visited = [('BLANK', 0, 0)] * 300000
 
 # def move(location, x, arrow):
 #     x = int(x)
