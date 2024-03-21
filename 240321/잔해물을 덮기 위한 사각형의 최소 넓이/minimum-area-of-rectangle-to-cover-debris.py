@@ -31,5 +31,9 @@ for i in range(a_x1, a_x2):
                 max_x = i
             if j > max_y:
                 max_y = j
+if min_x == 1e9:
+    min_x = 0
+if min_y == 1e9:
+    min_y = 0
 
 print((max_x + 1 - min_x) * (max_y + 1 - min_y))
