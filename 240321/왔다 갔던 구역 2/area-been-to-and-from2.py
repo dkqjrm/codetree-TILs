@@ -6,7 +6,7 @@ visited = [0] * 410
 def move(location, x, arrow):
     if arrow == 'L':
         after_location = location - int(x)
-        for i in range(location - 1, after_location - 1, -1): # 6L 이면 201 201 200 109 108 107을 체크함.
+        for i in range(after_location, location): # 6L 이면 201 201 200 109 108 107을 체크함.
             visited[i] += 1
 
     else:
@@ -26,4 +26,5 @@ for i in visited:
     if i >= 2:
         result += 1
 
+# print(visited)
 print(result)
