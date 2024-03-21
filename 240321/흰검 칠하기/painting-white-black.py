@@ -6,6 +6,8 @@ visited = [('Blank', 0, 0)] * 400
 
 def move(location, x, arrow):
     x = int(x)
+    if x == 1:
+        x += 1
     if arrow == 'L':
         new_location = location - x
         for i in range(new_location, location):
@@ -45,3 +47,10 @@ print(f'{white} {black} {grey}')
 # 199 200 201 202 203
 # 199 200 201 202 203 204 205
 #             202 203 204 205
+
+# 5
+# 1 L
+# 1 L
+# 1 R
+# 2 R
+# 1 L
