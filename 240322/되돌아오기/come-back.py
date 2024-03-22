@@ -1,5 +1,4 @@
 n = int(input())
-x, y = 0, 0
 
 dx = {
     'N': 0,
@@ -15,9 +14,7 @@ dy = {
     'W': 0
 }
 
-def in_range(x, y, n):
-    return 0 <= x and x < n and 0 <= y and y < n
-
+x, y = 0, 0
 check = False
 result_time = -1
 time = 0
@@ -30,11 +27,11 @@ for _ in range(n):
         time += 1
         move_x = x + (dx[direciton])
         move_y = y + (dy[direciton])
-
-        if in_range(move_x, move_y, n):
-            x = move_x
-            y = move_y
-        if time != 1 and check is False and x == 0 and y == 0:
+        
+        x = move_x
+        y = move_y
+            
+        if check is False and x == 0 and y == 0:
             check = True
             result_time = time
         
