@@ -1,8 +1,8 @@
 n, t = map(int, input().split())
 r, c, d = input().split()
-r, c = int(r) - 1, int(c) - 1 # 0 1
+r, c = int(r), int(c) # 0 1
 
-matrix = [[0] * n for _ in range(n)]
+matrix = [[0] * n for _ in range(n + 1)]
 
 dc = {
     'U': 0,
@@ -19,7 +19,7 @@ dr = {
 }
 
 def in_range(r, c, n):
-    return 0 <= r and r < n and 0 <= c and c < n
+    return 1 <= r and r <= n and 1 <= c and c <= n
 
 for _ in range(t):
     move_r = r + dr[d]
@@ -39,4 +39,4 @@ for _ in range(t):
         elif d == 'L':
             d = 'R'
 
-print(r + 1, c + 1) # 0 2
+print(r, c) # 0 2
