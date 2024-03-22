@@ -9,6 +9,7 @@ dy = [1, 0, -1, 0]
 direction = 0
 time = 0
 result_time = -1
+
 for cha in instruction:
     if cha == 'F':
         x += dx[direction]
