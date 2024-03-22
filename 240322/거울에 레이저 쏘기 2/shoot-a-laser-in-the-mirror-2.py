@@ -31,7 +31,7 @@ cnt = 0
 while in_range(r, c, n):
     # print(r, c, arrow)
     what = matrix[r-1][c-1]
-    print(what)
+    # print(what)
     if what == '\\':
         if arrow == 0:
             r = r
