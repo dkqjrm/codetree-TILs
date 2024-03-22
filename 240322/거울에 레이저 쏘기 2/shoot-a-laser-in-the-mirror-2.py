@@ -35,36 +35,36 @@ while in_range(r, c, n):
     if what == '\\':
         if arrow == 0:
             r += dr[arrow]
-            r += dc[arrow]
+            c += dc[arrow]
             arrow = 3
         elif arrow == 1:
             r += dr[3]
-            r += dc[3]
+            c += dc[3]
             arrow = 2
         elif arrow == 2:
             r += dr[arrow]
-            r += dc[arrow]
+            c += dc[arrow]
             arrow = 1
         else:  
             r += dr[1]
-            r += dc[1]
+            c += dc[1]
             arrow = 0
     elif what == '/':
         if arrow == 0:
             r += dr[2]
-            r += dc[2]
+            c += dc[2]
             arrow = 1
         elif arrow == 1:
             r += dr[arrow]
-            r += dc[arrow]
+            c += dc[arrow]
             arrow = 0
         elif arrow == 2:
             r += dr[0]
-            r += dc[0]
+            c += dc[0]
             arrow = 3
         else:  
             r += dr[arrow]
-            r += dc[arrow]
+            c += dc[arrow]
             arrow = 2
     cnt += 1
     
