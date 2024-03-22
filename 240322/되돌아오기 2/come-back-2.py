@@ -1,4 +1,4 @@
-instruction = input()
+instruction = 'FLLF'
 
 x, y = 0, 0
 
@@ -17,7 +17,7 @@ for cha in instruction:
     elif cha == 'R':
         direction = (direction + 1) % 4
     elif cha == 'L':
-        direciton = (direction + 3) % 4
+        direction = (direction + 3) % 4
     time += 1
     if x == 0 and y == 0 and result_time == -1:
         result_time = time        
