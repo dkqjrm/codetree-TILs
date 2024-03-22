@@ -21,6 +21,7 @@ def in_range(x, y, n):
 check = False
 result_time = -1
 time = 0
+
 for _ in range(n):
     direciton, num = input().split()
     num = int(num)
@@ -33,7 +34,7 @@ for _ in range(n):
         if in_range(move_x, move_y, n):
             x = move_x
             y = move_y
-        if check is False and x == 0 and y == 0:
+        if time != 1 and check is False and x == 0 and y == 0:
             check = True
             result_time = time
         
