@@ -1,4 +1,4 @@
-instruction = 'FLLF'
+instruction = input()
 
 x, y = 0, 0
 
