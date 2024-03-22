@@ -12,9 +12,8 @@ direction = 0
 
 r, c = 0, 0
 idx = 1
-
+matrix[r][c] = idx
 while idx != (row * column):
-    matrix[r][c] = idx
     move_r = r + dr[direction]
     move_c = c + dc[direction]
     if in_range(move_r, move_c, row, column) and matrix[move_r][move_c] == 0:
