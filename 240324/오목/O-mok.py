@@ -30,3 +30,5 @@ for i in range(n):
             print(result[0])
             print(result[1] + 1, result[2] + 1)
             break
+        else:
+            print(result)
