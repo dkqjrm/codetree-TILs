@@ -22,13 +22,16 @@ def checking(x, y):
 
         
 
-
+final_answer = 0
 for i in range(n):
     for j in range(n):
         result = checking(i, j)
         if result != 0:
-            print(result[0])
-            print(result[1] + 1, result[2] + 1)
+            final_answer = result
             break
-        else:
-            print(result)
+
+if final_answer == 0:
+    print(final_answer)
+else:
+    print(final_answer[0])
+    print(final_answer[1] + 1, final_answer[2] + 1)
