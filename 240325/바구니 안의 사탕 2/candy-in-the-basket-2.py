@@ -1,6 +1,6 @@
 n, k = map(int, input().split())
 
-array = [0] * 105 
+array = [0] * 500
 for _ in range(n):
     num, location = map(int, input().split())
     array[location] += num
