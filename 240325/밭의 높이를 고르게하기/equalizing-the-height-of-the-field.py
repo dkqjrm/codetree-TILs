@@ -6,8 +6,8 @@ array = list(map(int, input().split()))
 final_result = 1e9
 for i in range(n-t):
     result = 0
-    for idx in range(3):
-        result += abs(t - array[i + idx])
+    for idx in range(t):
+        result += abs(h - array[i + idx])
     final_result = min(final_result, result)
 
 print(final_result)
