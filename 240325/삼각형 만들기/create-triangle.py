@@ -5,7 +5,7 @@ def check(a, b, c): # x가 같은 게 2개 이상, y가 같은 게 2개 이상
     if a[0] == b[0] and b[1] == c[1]:
         return abs(b[1] - a[1]) * abs(c[0] - b[0])
     elif a[0] == b[0] and a[1] == c[1]:
-        return abs(a[1] - a[1]) * abs(c[0] - a[0])
+        return abs(b[1] - a[1]) * abs(c[0] - a[0])
     elif a[0] == c[0] and a[1] == b[1]:
         return abs(a[1] - c[1]) * abs(b[0] - a[0])
     elif a[0] == c[0] and b[1] == c[1]:
