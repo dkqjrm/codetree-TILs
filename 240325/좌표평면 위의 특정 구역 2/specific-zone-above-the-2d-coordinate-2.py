@@ -2,7 +2,7 @@ n = int(input())
 
 array = [list(map(int, input().split())) for _ in range(n)]
 
-result = 1e9
+result = 1e13
 for i in range(n): # 0, 1, 2, 3
     x_list = []
     y_list = []
