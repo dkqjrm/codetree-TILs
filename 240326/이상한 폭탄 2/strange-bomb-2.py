@@ -12,4 +12,7 @@ for i in range(n):
         if array[i] == array[j] and j - i <= k:
             bomb_list.append(array[i])
 
-print(max(bomb_list))
+if len(bomb_list) == 0:
+    print(-1)
+else:    
+    print(max(bomb_list))
