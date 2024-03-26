@@ -34,5 +34,5 @@ for i in range(n):
     else : # 예산 초과
         if s + (pre[i][0]/ 2)+ pre[i][1] < b: # 쿠폰 쓰면 safe
             cnt += 1
-
+            break
 print(cnt)
