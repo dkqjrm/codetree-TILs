@@ -20,19 +20,20 @@
 n, b = map(int, input('').split(' '))
 pre = []
 for i in range(n):
-    pre.append(list(map(int, input('').split(' '))))
+    q, w = map(int, input('').split(' '))
+    pre.append([q+w, q, w])
 pre.sort()
 
 cnt = 0
 s = 0
 
 for i in range(n):
-    price = pre[i][0] + pre[i][1]
+    price = pre[i][0]
     if s + price <= b: # 예산 미초과
        s += price
        cnt += 1
     else : # 예산 초과
-        if s + (pre[i][0]/ 2)+ pre[i][1] <= b: # 쿠폰 쓰면 safe
+        if s + (pre[i][1]/ 2)+ pre[i][2] <= b: # 쿠폰 쓰면 safe
             cnt += 1
             break
 print(cnt)
