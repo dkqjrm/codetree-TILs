@@ -28,11 +28,11 @@ s = 0
 
 for i in range(n):
     price = pre[i][0] + pre[i][1]
-    if s + price < b: # 예산 미초과
+    if s + price <= b: # 예산 미초과
        s += price
        cnt += 1
     else : # 예산 초과
-        if s + (pre[i][0]/ 2)+ pre[i][1] < b: # 쿠폰 쓰면 safe
+        if s + (pre[i][0]/ 2)+ pre[i][1] <= b: # 쿠폰 쓰면 safe
             cnt += 1
             break
 print(cnt)
