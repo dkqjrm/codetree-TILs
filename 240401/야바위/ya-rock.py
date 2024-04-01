@@ -12,11 +12,9 @@ def check(n):
             n = a
         
         if n == c:
-            return cnt
-        else:
             cnt += 1
 
-    return 0
+    return cnt
 
 max_cnt = 0
 for i in range(1, 3 + 1):
