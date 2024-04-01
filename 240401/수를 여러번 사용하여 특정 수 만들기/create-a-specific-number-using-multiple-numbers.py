@@ -26,6 +26,6 @@ for i in range(c // a + 1):
 
     cnt += num_b * b
     
-    ans = max(ans, cnt)
+    max_num = max(max_num, cnt)
 
-print(ans)
+print(max_num)
