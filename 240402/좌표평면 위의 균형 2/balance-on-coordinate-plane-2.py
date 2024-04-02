@@ -5,8 +5,8 @@ array = [list(map(int, input().split())) for _ in range(n)]
 
 min_m = 1e12
 
-for x in range(0, 101):
-    for y in range(0, 101):
+for x in range(0, 101, 2):
+    for y in range(0, 101, 2):
         pp = 0
         mp = 0
         mm = 0
