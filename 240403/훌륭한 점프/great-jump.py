@@ -9,19 +9,13 @@ def checking(i):
         if num <= i:
             possible_index.append(idx + 1)
 
-    if possible_index[0] > k:
-        return False
-
-    if possible_index[-1] != n:
-        return False
-
     for idx in range(1, len(possible_index)):
         if possible_index[idx] - possible_index[idx-1] > k:
             return False
 
     return True
 
-for i in range(array[0], max(array) + 1): # 최댓값이 i 일때
+for i in range(max(array[0], array[-1]), max(array) + 1): # 최댓값이 i 일때
     if checking(i):
         print(i)
         break
