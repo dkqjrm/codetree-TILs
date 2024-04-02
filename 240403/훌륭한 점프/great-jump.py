@@ -8,15 +8,16 @@ def checking(i):
     for idx, num in enumerate(array):
         if num <= i:
             possible_index.append(idx + 1)
+
     if possible_index[0] > k:
+        return False
+
+    if possible_index[-1] != n:
         return False
 
     for idx in range(1, len(possible_index)):
         if possible_index[idx] - possible_index[idx-1] > k:
             return False
-    
-    if possible_index[-1] + k < n:
-        return False
 
     return True
 
