@@ -20,7 +20,7 @@ def checking(i):
 
     return True
 
-for i in range(1, max(array) + 1): # 최댓값이 i 일때
+for i in range(array[0], max(array) + 1): # 최댓값이 i 일때
     if checking(i):
         print(i)
         break
