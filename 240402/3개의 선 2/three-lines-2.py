@@ -5,11 +5,14 @@ array = [list(map(int, input().split())) for _ in range(n)]
 def checking(array):
     x_list = []
     y_list = []
+
     for i in array:
         x_list.append(i[0])
         y_list.append(i[1])
+
     if len(x_list) <= 3 or len(y_list) <= 3:
         return 1
+
     else:
         for x in x_list:
             for y1 in y_list:
@@ -29,7 +32,7 @@ def checking(array):
                     if x1 != x2:
                         visited = [0] * (n+1)
                         for idx, i in enumerate(array):
-                            if i[0] == x1 or i[0] == x2 or i[1] == y2:
+                            if i[0] == x1 or i[0] == x2 or i[1] == y:
                                 visited[idx] = 1
                         
                         if sum(visited) == n:
