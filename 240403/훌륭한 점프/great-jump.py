@@ -7,7 +7,7 @@ def checking(i):
     possible_index = []
     for idx, num in enumerate(array):
         if num <= i:
-            possible_index.append(idx)
+            possible_index.append(idx + 1)
     if possible_index[0] > k:
         return False
 
