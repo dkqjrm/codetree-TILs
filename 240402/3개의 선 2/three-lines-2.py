@@ -10,6 +10,9 @@ def checking(array):
         x_list.append(i[0])
         y_list.append(i[1])
 
+    x_list = set(x_list)
+    y_list = set(y_list)
+    
     if len(x_list) <= 3 or len(y_list) <= 3:
         return 1
 
