@@ -12,7 +12,7 @@ def check(x):
 
 min_x = 1e12
 
-for x in range(1, array[0][1] // 2):
+for x in range(1, array[0][1]):
     if check(x):
         min_x = min(x, min_x)
     
