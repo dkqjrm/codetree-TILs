@@ -21,7 +21,8 @@ max_cnt = 0
 
 for i in range(n):
     for j in range(i, n):
-        if array[i] == 0 and array[j] == 0:
+        
+        if i != j and array[i] == 0 and array[j] == 0:
             array[i] = 1
             array[j] = 1
             cnt = check(array)
