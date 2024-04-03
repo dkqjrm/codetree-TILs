@@ -12,5 +12,5 @@ for maxi in range(0, 100): # max
 
     if len(tmp_result) <= m:
         min_result = min(min_result, max(tmp_result))
-    print(maxi, tmp_result, len(tmp_result))
+    # print(maxi, tmp_result, len(tmp_result))
 print(min_result)
