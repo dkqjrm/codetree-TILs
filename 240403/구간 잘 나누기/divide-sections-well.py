@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
-array = list(map(int, input().split()))
-min_result = 1e12
+# n, m = map(int, input().split())
+# array = list(map(int, input().split()))
+# min_result = 1e12
 
 # for i in range(len(array)):
 #     tmp_array = []
@@ -19,17 +19,39 @@ min_result = 1e12
 
 # print(min_result)
 
-for maxi in range(0, 101): # max
-    end = 0
-    tmp_array = []
-    for i in range(len(array)):
-        if sum(array[end:i + 1]) > maxi:
-            tmp_array.append(sum(array[end:i + 1]))
-            end = i + 1
-        elif i + 1 == n:
-            tmp_array.append(sum(array[end:i + 1]))
+# n, m = map(int, input().split())
+# array = list(map(int, input().split()))
+# min_result = 1e12
 
-    if len(tmp_array) == m:
-        min_result = min(min_result, max(tmp_array))
+# for maxi in range(0, 101): # max
+#     end = 0
+#     tmp_array = []
+#     for i in range(len(array)):
+#         if sum(array[end:i + 1]) > maxi:
+#             tmp_array.append(sum(array[end:i + 1]))
+#             end = i + 1
+#         elif i + 1 == n:
+#             tmp_array.append(sum(array[end:i + 1]))
+
+#     if len(tmp_array) == m:
+#         min_result = min(min_result, max(tmp_array))
+
+# print(min_result)
+
+n, m = map(int, input().split())
+array = list(map(int, input().split()))
+min_result = 1e12
+
+for maxi in range(1, 101): # max
+    end = 0
+    tmp_result = [0]
+    for i in array:
+        if tmp_result[-1] + i > maxi:
+            tmp_result.append(i)
+        else:
+            tmp_result[-1] += i
+
+    if len(tmp_result) == 3:
+        min_result = min(min_result, max(tmp_result))
 
 print(min_result)
