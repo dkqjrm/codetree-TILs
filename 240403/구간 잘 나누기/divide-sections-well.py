@@ -51,7 +51,7 @@ for maxi in range(1, 101): # max
         else:
             tmp_result[-1] += i
 
-    if len(tmp_result) == 3:
+    if len(tmp_result) == m:
         min_result = min(min_result, max(tmp_result))
 
 print(min_result)
