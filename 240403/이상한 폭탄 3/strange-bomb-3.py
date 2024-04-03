@@ -15,4 +15,4 @@ for i in range(1, max(array) + 1): # 조사할 정수
                     bomb[i] += 1
             now = idx
 
-print(sorted(bomb.items(), key = lambda x : -x[1])[0][1])
+print(sorted(bomb.items(), key = lambda x : (-x[1], -x[0]))[0][1])
