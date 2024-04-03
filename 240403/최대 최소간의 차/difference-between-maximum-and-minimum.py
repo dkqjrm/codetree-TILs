@@ -4,7 +4,7 @@ array = list(map(int, input().split()))
 min_cost = 1e12
 
 for mini in range(min(array), max(array) + 1):
-    maxi = mini + 2
+    maxi = mini + k
     cost = 0
 
     for i in array:
