@@ -1,11 +1,11 @@
 a, b = map(int, input().split())
 c, d = map(int, input().split())
 
-if b < c or d < a:
+if b <= c or d <= a:
     result = b - a + d - c
-elif a < c and c < b and b < d:
+elif a <= c and c < b and b <= d:
     result = c - a + b - c + d - b
-elif c < a and a < d and d < b:
+elif c <= a and a < d and d <= b:
     result = a - c + d - a + b - d
 
 elif a <= c and d <= b:
