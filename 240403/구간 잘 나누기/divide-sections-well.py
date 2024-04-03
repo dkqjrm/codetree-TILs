@@ -13,6 +13,6 @@ for maxi in range(max(array), 10001): # max
             total += array[idx]
     tmp_result.append(total)
 
-    if len(tmp_result) == m:
+    if len(tmp_result) <= m:
         print(maxi)
         break
