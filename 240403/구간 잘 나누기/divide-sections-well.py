@@ -10,7 +10,7 @@ for i in range(len(array)):
     end = i + 1
     cnt = 1
     for j in range(i + 1, len(array)):
-        if sum(array[end:j + 1]) <= maxi:
+        if sum(array[end:j + 1]) < maxi:
             tmp_array.append(sum(array[end:j + 1]))
             end = j - 1
 
