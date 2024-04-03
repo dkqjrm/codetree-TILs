@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 array = list(map(int, input().split()))
 min_result = 1e12
 
-for maxi in range(1, 10001): # max
+for maxi in range(array[0], 10001): # max
     tmp_result = [array[0]]
     for idx in range(1, len(array)):
         if tmp_result[-1] + array[idx] > maxi:
@@ -12,4 +12,5 @@ for maxi in range(1, 10001): # max
 
     if len(tmp_result) == m:
         min_result = min(min_result, max(tmp_result))
+
 print(min_result)
