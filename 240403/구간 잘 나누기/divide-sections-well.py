@@ -53,5 +53,5 @@ for maxi in range(max(array), 101): # max
     if len(tmp_result) == m:
         min_result = min(min_result, max(tmp_result))
 
-    print(tmp_result)
+    # print(tmp_result)
 print(min_result)
