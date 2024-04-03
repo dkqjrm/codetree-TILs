@@ -14,5 +14,7 @@ for i in range(1, max(array) + 1): # 조사할 정수
                 bomb[idx] = 1
             now = idx
     bomb_dict[i] = sum(bomb)
-
-print(sorted(bomb_dict.items(), key = lambda x : (-x[1], -x[0]))[0][0])
+if sum(bomb_dict.values()) == 0:
+    print(0)
+else:
+    print(sorted(bomb_dict.items(), key = lambda x : (-x[1], -x[0]))[0][0])
