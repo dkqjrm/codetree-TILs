@@ -1,18 +1,16 @@
 n, m = map(int, input().split())
 array = list(map(int, input().split()))
+min_result = 1e12
 
-for maxi in range(max(array), 10001): # max
-    tmp_result = []
-    total = array[0]
-    
-    for idx in range(1, n):
-        if total + array[idx] > maxi:
-            tmp_result.append(total)
-            total = array[idx]
+for maxi in range(0, 100): # max
+    tmp_result = [array[0]]
+    for idx in range(0, len(array)):
+        if tmp_result[-1] + array[idx] > maxi:
+            tmp_result.append(array[idx])
         else:
-            total += array[idx]
-    tmp_result.append(total)
+            tmp_result[-1] += array[idx]
 
     if len(tmp_result) <= m:
-        print(maxi)
-        break
+        min_result = min(min_result, max(tmp_result))
+    print(maxi, tmp_result, len(tmp_result))
+print(min_result)
