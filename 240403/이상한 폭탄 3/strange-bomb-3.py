@@ -3,7 +3,7 @@ array = [int(input()) for _ in range(n)]
 
 bomb_dict = {}
 
-for i in range(1, max(array) + 1): # 조사할 정수
+for i in set(array): # 조사할 정수
     now = -1e12
     bomb = [0] * 1000
     for idx, num in enumerate(array):
