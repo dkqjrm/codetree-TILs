@@ -11,7 +11,7 @@ for i in range(n):
 for idx, (c, u) in enumerate(array):
     if idx >= (p-1) and c in people:
         people.remove(c)
-    if idx == (p-1) and u == 0:
+    if idx == (p-1) and u == '0':
         people = []
 print(*people)
 
