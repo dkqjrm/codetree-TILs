@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-array = list(input())
+array = input()
 arrow = n
 
 for _ in range(m):
@@ -19,11 +19,11 @@ for _ in range(m):
             arrow += 1
     elif instruction == 'D':
         if arrow != len(array):
-            array.pop(arrow)
+            array = array[:arrow] + array[arrow+1:]
 
     elif instruction == 'P':
-        array = array[:arrow] + [alpha] + array[arrow:]
+        array = array[:arrow] + alpha + array[arrow:]
         arrow += 1
     # print(array, arrow)
 
-print(''.join(array))
+print(array)
