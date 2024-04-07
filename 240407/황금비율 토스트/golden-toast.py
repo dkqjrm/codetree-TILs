@@ -15,16 +15,15 @@ for _ in range(m):
         if arrow != 0 :
             arrow -= 1
     elif instruction == 'R':
-        if arrow != n:
+        if arrow != len(array):
             arrow += 1
     elif instruction == 'D':
-        if arrow != n - 1:
+        if arrow != len(array):
             array.pop(arrow)
-            if arrow != 0:
-                arrow -= 1
 
     elif instruction == 'P':
         array = array[:arrow] + [alpha] + array[arrow:]
         arrow += 1
+    # print(array, arrow)
 
 print(''.join(array))
