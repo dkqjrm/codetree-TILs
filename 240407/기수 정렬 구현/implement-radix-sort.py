@@ -4,8 +4,7 @@ MAX_DIGIT = 10
 n = int(input())
 array = list(map(int, input().split()))
 
-def custom_sort():
-    global array
+def custom_sort(array):
     p = 1
     for pos in range(MAX_K):
         arr_new = [[] for _ in range(MAX_DIGIT)]
@@ -19,7 +18,9 @@ def custom_sort():
                 array.append(i)
 
         p *= 10
+
+    return array
     
-custom_sort()
+array = custom_sort(array)
 
 print(*array)
