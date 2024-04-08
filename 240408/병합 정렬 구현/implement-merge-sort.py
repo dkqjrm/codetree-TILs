@@ -7,7 +7,7 @@ def merge_sort():
             return
         mid = (low + high) // 2
         sort(low, mid)
-        sort(mid + 1, high)
+        sort(mid, high)
         merge(low, mid, high)
 
     def merge(low, mid, high):
