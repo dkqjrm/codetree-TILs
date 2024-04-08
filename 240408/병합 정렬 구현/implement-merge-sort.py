@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 
 def merge_sort():
     def sort(low, high):
-        if high - low < 2:
+        if high <= low:
             return
         mid = (low + high) // 2
         sort(low, mid)
