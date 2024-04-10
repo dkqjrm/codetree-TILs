@@ -14,10 +14,10 @@ def solve(question):
             else:
                 return "No"
         
-        if len(arr) == 0:
-            return "Yes"
-        else:
-            return "No"
+    if len(arr) == 0:
+        return "Yes"
+    else:
+        return "No"
 
 
 print(solve(question))
