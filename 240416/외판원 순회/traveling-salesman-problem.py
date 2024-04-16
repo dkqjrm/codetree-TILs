@@ -35,6 +35,7 @@ for result in results:
         for i in result:
             if matrix[now][i] == 0:
                 check = False
+                break
             total += matrix[now][i]
             now = i
         if check == True:
