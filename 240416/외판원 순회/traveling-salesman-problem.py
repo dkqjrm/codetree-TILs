@@ -8,12 +8,25 @@ visited = [0] * (n + 1)
 
 results = []
 result = []
+min_total = 1e12
 
 def check(num):
+    global min_total
     if num == n + 1:
         # print(*result)
-        results.append(result[:])
-        return
+        if result[-1] == 0:
+            total = 0
+            now = 0
+            checking = True
+            for i in result:
+                if matrix[now][i] == 0:
+                    checking = False
+                    break
+                total += matrix[now][i]
+                now = i
+            if checking == True:
+                min_total = min(total, min_total)
+            return
     
     for i in range(n):
         if visited[i] == 0:
@@ -25,21 +38,8 @@ def check(num):
 
 
 check(1)
-min_total = 1e12
 
-for result in results:
-    if result[-1] == 0:
-        total = 0
-        now = 0
-        check = True
-        for i in result:
-            if matrix[now][i] == 0:
-                check = False
-                break
-            total += matrix[now][i]
-            now = i
-        if check == True:
-            min_total = min(total, min_total)
+
 
 
 
