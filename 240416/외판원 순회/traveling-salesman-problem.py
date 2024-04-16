@@ -21,7 +21,7 @@ def check(num):
             for i in result:
                 if matrix[now][i] == 0:
                     checking = False
-                    break
+                    return
                 total += matrix[now][i]
                 now = i
             if checking == True:
