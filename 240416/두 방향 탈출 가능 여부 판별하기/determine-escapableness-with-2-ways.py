@@ -20,8 +20,9 @@ def dfs(r, c):
             dfs(r + dr, c + dc)
 
 dfs(0, 0)
+# print(visited)
 
-if visited[n-1][m-1] == 1:
+if visited[m-1][n-1] == 1:
     print(1)
 else:
     print(0)
