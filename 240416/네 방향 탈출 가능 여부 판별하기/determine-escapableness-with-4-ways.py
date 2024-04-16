@@ -5,13 +5,13 @@ q = deque()
 n, m = map(int, input().split())
 
 matrix = [list(map(int, input().split())) for _ in range(n)]
-visited = [[0] * n for _ in range(n)]
+visited = [[0] * m for _ in range(n)]
 
 q.append([0, 0])
 visited[0][0] = 1
 
 def in_range(r, c):
-    return 0 <= r < n and 0 <= c < n
+    return 0 <= r < n and 0 <= c < m
 
 drs = [1, -1, 0, 0]
 dcs = [0, 0, -1, 1]
@@ -26,4 +26,4 @@ while q:
             visited[next_r][next_c] = 1
 
 
-print(int(visited[n-1][n-1] == 1))
+print(int(visited[n-1][m-1] == 1))
