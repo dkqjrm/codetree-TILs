@@ -31,10 +31,14 @@ for result in results:
     if result[-1] == 0:
         total = 0
         now = 0
+        check = True
         for i in result:
+            if matrix[now][i] == 0:
+                check = False
             total += matrix[now][i]
             now = i
-        min_total = min(total, min_total)
+        if check == True:
+            min_total = min(total, min_total)
 
 
 
