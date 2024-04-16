@@ -32,3 +32,4 @@ for num in range(1, max(sum(matrix, [])) + 1):
 for idx, i in enumerate(total_num, start = 1):
     if i == max(total_num):
         print(idx, i)
+        break
