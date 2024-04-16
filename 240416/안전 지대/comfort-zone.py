@@ -1,3 +1,7 @@
+import sys
+
+sys.setrecursionlimit(3000)
+
 n, m = map(int, input().split())
 
 matrix = [list(map(int, input().split())) for _ in range(n)]
@@ -14,7 +18,7 @@ def dfs(r, c, num):
     for dr, dc in zip(drs, dcs):
         if in_range(r + dr, c + dc) and matrix[r + dr][c + dc] > num and visited[r + dr][c + dc] == 0:
             visited[r + dr][c + dc] = 1
-            dfs(r + dr, c+ dc, num)
+            dfs(r + dr, c + dc, num)
 
 total_num = []
 
