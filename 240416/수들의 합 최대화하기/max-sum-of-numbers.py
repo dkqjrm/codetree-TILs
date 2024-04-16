@@ -10,12 +10,12 @@ def find(num):
     if num == n + 1:
         tmp_total = 0
         for idx, i in enumerate(answer):
-            tmp_total += matrix[idx][i-1]
-
+            tmp_total += matrix[idx][i]
+        # print(answer)
         total = max(tmp_total, total)
         return
     
-    for i in range(n + 1):
+    for i in range(n):
         if visited[i] == 0:
             visited[i] = 1
             answer.append(i)
