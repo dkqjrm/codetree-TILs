@@ -14,6 +14,7 @@ def in_range(r, c):
 total_num = []
 
 def dfs(r, c):
+    visited[r][c] = 1
     for dr, dc in zip(drs, dcs):
         if in_range(r + dr, c + dc) and matrix[r + dr][c + dc] == 1 and visited[r + dr][c + dc] == 0:
             visited[r + dr][c + dc] = 1
