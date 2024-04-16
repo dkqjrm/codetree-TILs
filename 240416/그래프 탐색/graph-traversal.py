@@ -17,4 +17,4 @@ def dfs(vertex):
 
 dfs(1)
 # print(visited)
-print(sum(visited) - 1)
+print(sum(visited[2:]))
