@@ -24,7 +24,7 @@ cnt = 0
 while cnt != k:
     value = matrix[r][c]
     visited = [
-        [[0,-1,-1,-1] for _ in range(n)]
+        [[0,0,0,-1] for _ in range(n)]
         for _ in range(n)]
 
     while q:
