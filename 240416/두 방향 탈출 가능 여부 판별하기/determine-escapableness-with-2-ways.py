@@ -1,13 +1,13 @@
 n, m = map(int, input().split())
 
-matrix = [list(map(int,input().split())) for _ in range(m)]
-visited = [[0] * n for _ in range(m)]
+matrix = [list(map(int,input().split())) for _ in range(n)]
+visited = [[0] * m for _ in range(n)]
 
 drs = [0, 1] # 우 상
 dcs = [1, 0] # 우 상
 
 def in_range(r, c):
-    if 0 <= r < m and 0 <= c < n:
+    if 0 <= r < n and 0 <= c < m:
         return True
     else:
         return False
@@ -22,7 +22,7 @@ def dfs(r, c):
 dfs(0, 0)
 # print(visited)
 
-if visited[m-1][n-1] == 1:
+if visited[n-1][m-1] == 1:
     print(1)
 else:
     print(0)
