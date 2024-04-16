@@ -16,6 +16,8 @@ def in_range(r, c):
 cnt = 0
 
 for starting_point in starting_points:
+    starting_point[0] -= 1
+    starting_point[1] -= 1
     if visited[starting_point[0]][starting_point[1]] == 0 and matrix[starting_point[0]][starting_point[1]] == 0:
         q.append([starting_point[0], starting_point[1]])
         visited[starting_point[0]][starting_point[1]] = 1
