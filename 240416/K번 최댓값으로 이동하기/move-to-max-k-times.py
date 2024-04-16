@@ -32,7 +32,7 @@ while cnt != k:
         for dr, dc in zip(drs, dcs):
             nr = r + dr
             nc = c + dc
-            if in_range(nr, nc) and matrix[nr][nc] < value and visited[nr][nc] == [0, -1, -1, -1]:
+            if in_range(nr, nc) and matrix[nr][nc] < value and visited[nr][nc] == [0, 0, 0, -1]:
                 visited[nr][nc] = [1, nr, nc, matrix[nr][nc]]
                 q.append([nr, nc])
 
@@ -40,8 +40,9 @@ while cnt != k:
     # visited.sort(key = lambda x : (-x[0][3], x[0][1], x[0][2]))
     tmp = sorted(sum(visited, []), key = lambda x : (-x[3], x[1], x[2]))[0]
     # print(tmp)
-    r = tmp[1]
-    c = tmp[2]
+    if tmp[3] != -1:
+        r = tmp[1]
+        c = tmp[2]
+        q.append([r, c])
     cnt += 1
-    q.append([r, c])
 print(r + 1, c + 1)
