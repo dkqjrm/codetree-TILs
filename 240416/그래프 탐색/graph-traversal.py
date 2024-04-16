@@ -9,10 +9,12 @@ for _ in range(m):
     matrix[y].append(x)
 
 def dfs(vertex):
-    visited[vertex] = 1
+    # visited[vertex] = 1
     for v in matrix[vertex]:
         if visited[v] == 0:
             visited[v] = 1
+            dfs(v)
 
 dfs(1)
+# print(visited)
 print(sum(visited) - 1)
