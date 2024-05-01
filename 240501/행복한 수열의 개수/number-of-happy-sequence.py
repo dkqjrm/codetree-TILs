@@ -17,6 +17,9 @@ for i in range(n):
     for r in range(n):
         if matrix[r][i] == tmp:
             cnt += 1
+        else:
+            cnt = 1
+            
         if cnt >= m:
             total += 1
             break
@@ -28,6 +31,9 @@ for i in range(n):
     for c in range(n):
         if matrix[i][c] == tmp:
             cnt += 1
+        else:
+            cnt = 1
+
         if cnt >= m:
             total += 1
             break
