@@ -19,7 +19,7 @@ def solve(r, c, k):
 
 for r in range(n):
     for c in range(n):
-        for k in range(n):
+        for k in range(n + 1):
             cost = (k ** 2 + (k + 1) ** 2)
             total = solve(r, c, k)
             if (total * m) - cost >= 0:
