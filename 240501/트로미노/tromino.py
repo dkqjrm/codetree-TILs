@@ -44,11 +44,11 @@ max_total = -1
 
 for r in range(n):
     for c in range(m):
-        for tmp in zip(dr, dc):
+        for tmp_r, tmp_c in zip(dr, dc):
             total = matrix[r][c]
             nr = r
             nc = c
-            for t_r, t_c in tmp:
+            for t_r, t_c in zip(tmp_r, tmp_c):
                 nr += t_r
                 nc += t_c
                 if checking(nr, nc):
