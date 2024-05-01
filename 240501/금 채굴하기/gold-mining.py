@@ -35,12 +35,14 @@ max_total = 0
 
 for r in range(n):
     for c in range(n):
-        for k in range(4):
+        for k in range(20):
             visited = [[0] * n for _ in range(n)]
             total = 0
             cost = k ** 2 + (k + 1) ** 2
-            solve(r, c, n // 2 + 1)
+            solve(r, c, k)
+            # print(total)
             if cost - total * m >= 0:
                 max_total = max(total, max_total)
+            # print(*visited)
 
 print(max_total)
