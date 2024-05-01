@@ -6,49 +6,23 @@
 
 n, m = map(int, input().split())
 matrix = [list(map(int, input().split())) for _ in range(n)]
-visited = [[0] * n for _ in range(n)]
-
-def check(r, c):
-    return 0 <= r < n and 0 <= c < n
-
-drs = [-1, 1, 0, 0]
-dcs = [0, 0, -1, 1]
-
-def solve(r, c, k):
-    global total
-    if visited[r][c] == 0 and matrix[r][c] == 1:
-        total += 1
-        visited[r][c] = 1
-
-    if k == 0:
-        if visited[r][c] == 0 and matrix[r][c] == 1:
-            total += 1
-            visited[r][c] = 1
-        return
-
-    for dr, dc in zip(drs, dcs):
-        nr = r + dr
-        nc = c + dc
-        if check(nr, nc) and visited[nr][nc] == 0:
-            visited[nr][nc] = 1
-            if matrix[nr][nc] == 1:
-                total += 1
-            solve(nr, nc, k- 1)
-
-    
 
 max_total = 0
 
+def solve(r, c, k):
+    total = 0
+    for i in range(n):
+        for j in range(n):
+            if abs(r - i) + abs(c - j) <= k:
+                total += matrix[i][j]
+    return total
+
 for r in range(n):
     for c in range(n):
-        for k in range(20):
-            visited = [[0] * n for _ in range(n)]
-            total = 0
-            cost = k ** 2 + (k + 1) ** 2
-            solve(r, c, k)
-            # print(total)
-            if total * m - cost >= 0:
-                max_total = max(total, max_total)
-            # print(*visited)
+        for k in range(n - 1):
+            cost = (k ** 2 + (k + 1) ** 2)
+            total = solve(r, c, k)
+            if (total * m) - cost >= 0:
+                max_total = max(max_total, total)
 
 print(max_total)
