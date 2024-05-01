@@ -39,7 +39,7 @@ for r in range(n):
             visited = [[0] * n for _ in range(n)]
             total = 0
             cost = k ** 2 + (k + 1) ** 2
-            solve(r, c, n // 2)
+            solve(r, c, n // 2 + 1)
             if cost - total * m >= 0:
                 max_total = max(total, max_total)
 
