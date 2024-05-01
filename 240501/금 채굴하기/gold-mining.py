@@ -19,7 +19,7 @@ def solve(r, c, k):
     if visited[r][c] == 0 and matrix[r][c] == 1:
         total += 1
         visited[r][c] = 1
-        
+
     if k == 0:
         if visited[r][c] == 0 and matrix[r][c] == 1:
             total += 1
@@ -41,7 +41,7 @@ max_total = 0
 
 for r in range(n):
     for c in range(n):
-        for k in range(5):
+        for k in range(20):
             visited = [[0] * n for _ in range(n)]
             total = 0
             cost = k ** 2 + (k + 1) ** 2
