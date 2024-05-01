@@ -16,8 +16,14 @@ dcs = [0, 0, -1, 1]
 
 def solve(r, c, k):
     global total
-    if k == 0:
+    if visited[r][c] == 0 and matrix[r][c] == 1:
+        total += 1
         visited[r][c] = 1
+        
+    if k == 0:
+        if visited[r][c] == 0 and matrix[r][c] == 1:
+            total += 1
+            visited[r][c] = 1
         return
 
     for dr, dc in zip(drs, dcs):
@@ -35,13 +41,13 @@ max_total = 0
 
 for r in range(n):
     for c in range(n):
-        for k in range(20):
+        for k in range(5):
             visited = [[0] * n for _ in range(n)]
             total = 0
             cost = k ** 2 + (k + 1) ** 2
             solve(r, c, k)
             # print(total)
-            if cost - total * m >= 0:
+            if total * m - cost >= 0:
                 max_total = max(total, max_total)
             # print(*visited)
 
