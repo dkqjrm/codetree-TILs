@@ -1,0 +1,22 @@
+n, m = map(int, input().split()) # n개의 주문, m개의 처리기
+array = list(map(int, input().split())) # 처리기 용량
+
+
+# dp로 풀자
+
+dp = [100000] * (n + 1)
+dp[0] = 0
+
+# 1 1 2면 1 2 3이 가능한거 아님?
+for i in range(m):
+    for j in range(m):
+        if i != j and array[i] + array[j] not in array:
+            array.append(array[i] + array[j])
+#[1, 1, 1, 1, 2, 2, 2, 3]
+
+for current_num in range(n + 1): # 다 한번씩 처리할 수 있는 양으로 볼거임.
+    for i in array:
+        if current_num + i <= n:
+            dp[current_num + i] = min(dp[current_num] + 1, dp[current_num + i])
+
+print(dp[n])
