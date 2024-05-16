@@ -1,4 +1,4 @@
-from itertools import permutations
+from itertools import combinations
 
 # n, m = map(int, input().split()) # n개의 주문, m개의 처리기
 # array = list(map(int, input().split())) # 처리기 용량
@@ -16,7 +16,7 @@ from itertools import permutations
 # #             array.append(array[i] + array[j])
 # #[1, 1, 1, 1, 2, 2, 2, 3]
 
-# for i in permutations(array, 2):
+# for i in combinations(array, 2):
 #     if sum(i) not in array:
 #         array.append(sum(i))
 
@@ -42,7 +42,7 @@ array = list(map(int, input().split())) # 처리기 용량
 #             array.append(array[i] + array[j])
 # #[1, 1, 1, 1, 2, 2, 2, 3]
 
-for i in permutations(array, 2):
+for i in combinations(array, 2):
     if sum(i) not in array:
         array.append(sum(i))
 
