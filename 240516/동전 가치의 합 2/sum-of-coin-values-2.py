@@ -11,7 +11,7 @@ for p, k in coins: # 동전 순서대로
         for count in range(1, k + 1):
             if current_money + p * count <= m:
                 # dp[current_money + p * count] += dp[current_money]
-                dp[current_money + p * count] = (dp[current_money + p * count] + dp[current_money]) % 1,000,000,007
+                dp[current_money + p * count] = (dp[current_money + p * count] + dp[current_money]) % 1000000007
 
             else:
                 break
