@@ -28,6 +28,8 @@ for _ in range(q):
                 else:
                     d = 'L'
                 matrix = wind(matrix, i, d)
+            else:
+                break
     
     d = init_d
 
@@ -39,6 +41,8 @@ for _ in range(q):
                 else:
                     d = 'L'
                 matrix = wind(matrix, i, d)
+            else:
+                break
 
 for i in matrix:
     print(*i)
