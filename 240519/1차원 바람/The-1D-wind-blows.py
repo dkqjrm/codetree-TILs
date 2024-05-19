@@ -20,23 +20,25 @@ for _ in range(q):
     r = int(r) - 1
     matrix = wind(matrix, r, d)
     
-    for i in range(r - 1, -1, -1):
-        if any(matrix[i + 1][j] == matrix[i][j] for j in range(m)):
-            if d == 'L':
-                d = 'R'
-            else:
-                d = 'L'
-            matrix = wind(matrix, i, d)
+    if r != 0:
+        for i in range(r - 1, -1, -1):
+            if any(matrix[i + 1][j] == matrix[i][j] for j in range(m)):
+                if d == 'L':
+                    d = 'R'
+                else:
+                    d = 'L'
+                matrix = wind(matrix, i, d)
     
     d = init_d
 
-    for i in range(r + 1, n):
-        if any(matrix[i - 1][j] == matrix[i][j] for j in range(m)):
-            if d == 'L':
-                d = 'R'
-            else:
-                d = 'L'
-            matrix = wind(matrix, i, d)
+    if r != n - 1:
+        for i in range(r + 1, n):
+            if any(matrix[i - 1][j] == matrix[i][j] for j in range(m)):
+                if d == 'L':
+                    d = 'R'
+                else:
+                    d = 'L'
+                matrix = wind(matrix, i, d)
 
 for i in matrix:
     print(*i)
