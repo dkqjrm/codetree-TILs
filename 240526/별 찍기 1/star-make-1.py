@@ -10,4 +10,4 @@ if b == 3:
     for i in range(a - 1, -1, -1): # 4 3 2 1 0
         print(' '*i, end='')
 
-        print('*'*(2*(5-i)-1))
+        print('*'*(2*(a-i)-1))
