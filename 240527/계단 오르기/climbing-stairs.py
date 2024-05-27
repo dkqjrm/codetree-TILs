@@ -12,14 +12,14 @@
 # print(dp[n] % 10007)
 
 n = int(input())
-memo = [-1] * 1005
+memo = [0] * 1005
 memo[0] = 0
 memo[1] = 0
 memo[2] = 1
 memo[3] = 1
 
 def solve(n):
-    if memo[n] != -1:
+    if memo[n] != 0:
         return memo[n]
     
     memo[n] = memo[n-2] + memo[n-3]
