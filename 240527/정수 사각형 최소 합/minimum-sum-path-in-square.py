@@ -13,4 +13,4 @@ for c in range(n-2, -1, -1):
     for r in range(1, n):
         dp[r][c] = min(dp[r-1][c], dp[r][c+1]) + array[r][c]
 
-print(min(dp[-1][0]))
+print(dp[-1][0])
