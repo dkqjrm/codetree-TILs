@@ -15,12 +15,13 @@ memo = [-1 for _ in range(n+1)]
 def solve(n):
     if memo[n] != -1:
         return memo[n]
-        
+
     if n == 0:
         return 0
     elif n == 1:
         return 1
+    memo[n] = solve(n-1) + solve(n-2
     
-    return solve(n-1) + solve(n-2)
+    return memo[n]
 
 print(solve(n))
