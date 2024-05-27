@@ -20,7 +20,8 @@ def solve(n):
         return 0
     elif n == 1:
         return 1
-    memo[n] = solve(n-1) + solve(n-2
+
+    memo[n] = solve(n-1) + solve(n-2)
     
     return memo[n]
 
