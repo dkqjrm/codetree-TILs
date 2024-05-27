@@ -7,6 +7,6 @@ dp[3] = 1
 n = int(input())
 
 for i in range(4, n + 1):
-    dp[i] = dp[i-2] + dp[i-3]
+    dp[i] = (dp[i-2] + dp[i-3]) % 10007
 
-print(dp[n] % 10007)
+print(dp[n])
