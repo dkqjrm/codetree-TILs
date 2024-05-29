@@ -21,15 +21,7 @@ def dfs(r, c):
 
 for r in range(n):
     for c in range(n):
-        check = False
-        # r, c는 스타팅 포인트
-        for dr, dc in zip(drs, dcs):
-            next_r = r + dr
-            next_c = c + dc
-            if in_range(next_r, next_c) and matrix[next_r][next_c] < matrix[r][c]:
-                check = True
-                
-        if check is False:
+        if dp[r][c] == 1:
             dfs(r, c)
 
 # for i in dp:
