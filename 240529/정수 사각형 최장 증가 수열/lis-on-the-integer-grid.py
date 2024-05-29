@@ -32,9 +32,10 @@ def dfs(r, c):
     dp[r][c] = max_move
     return dp[r][c]
 
+max_result = 0
 for r in range(n):
     for c in range(n):
-        dfs(r, c)
+        max_result = max(max_result, dfs(r, c))
 
 # for i in dp:
 #     print(*i)
