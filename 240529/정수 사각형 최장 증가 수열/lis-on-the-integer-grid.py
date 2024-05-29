@@ -34,8 +34,7 @@ def dfs(r, c):
 
 for r in range(n):
     for c in range(n):
-        if dp[r][c] == -1:
-            dfs(r, c)
+        dfs(r, c)
 
 # for i in dp:
 #     print(*i)
