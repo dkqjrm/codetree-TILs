@@ -7,6 +7,9 @@ for i in range(n - 1):
     for j in range(n - 1):
         num = array[i][j]
         cnt = dp[i][j]
+        if dp[i][j] == -1:
+            continue
+            
         for k in range(i + 1, n):
             for l in range(j + 1, n):
                 if array[k][l] > num:
