@@ -11,10 +11,12 @@ for i in range(n):
         if in_range(idx):
             dp[idx] = max(dp[i] + 1, dp[idx])
 
+# print(dp)
 num = 0
 for i in range(1, n):
     if dp[i] != 0:
         num = max(num, dp[i])
     else:
-        print(num)
         break
+
+print(num)
