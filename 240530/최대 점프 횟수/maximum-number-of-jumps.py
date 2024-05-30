@@ -13,8 +13,8 @@ for i in range(n):
 
 num = 0
 for i in range(1, n):
-    if i != 0:
-        num = max(num, i)
+    if dp[i] != 0:
+        num = max(num, dp[i])
     else:
         print(num)
         break
