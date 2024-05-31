@@ -5,7 +5,7 @@ coins = list(map(int, input().split()))
 dp = [1e12] * (m + 1)
 dp[0] = 1
 for coin in coins:
-    if coin < m:
+    if coin <= m:
         dp[coin] = 1
 
 for i in range(max(coins), m + 1):
