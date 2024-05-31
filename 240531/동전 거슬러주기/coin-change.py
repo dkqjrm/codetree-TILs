@@ -2,15 +2,17 @@
 
 n, m = map(int, input().split())
 coins = list(map(int, input().split()))
-dp = [1e12] * (m + 1)
+dp = [1e12] * (10005)
 dp[0] = 1
 for coin in coins:
-    if coin <= m:
-        dp[coin] = 1
+    dp[coin] = 1
 
-for i in range(max(coins), m + 1):
+for i in range(1, m + 1):
     for coin in coins:
-        dp[i] = min(dp[i], dp[i-coin] + 1)
+        if i-coin < 0:
+            continue
+        else:
+            dp[i] = min(dp[i], dp[i-coin] + 1)
 
 coin = dp[m]
 
