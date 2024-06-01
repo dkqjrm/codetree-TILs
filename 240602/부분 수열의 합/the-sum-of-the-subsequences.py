@@ -5,7 +5,8 @@ dp[0] = 0
 
 for num in array:
     for i in range(m, -1, -1):
-        dp[i] = min(dp[i - num] + 1, dp[i])
+        if i - num >= 0:
+            dp[i] = min(dp[i - num] + 1, dp[i])
 
 # print(dp)
 
