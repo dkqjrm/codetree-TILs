@@ -6,6 +6,8 @@ dp[0] = 1
 
 for i in range(n + 1):
     for num in array:
-        dp[i] += dp[i - num] % 10007
+        dp[i] += dp[i - num]
+    
+    dp[i] %= 10007
 
 print(dp[-1])
