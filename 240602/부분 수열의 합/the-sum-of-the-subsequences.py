@@ -7,7 +7,7 @@ for num in array:
     for i in range(m, -1, -1):
         dp[i] = min(dp[i - num] + 1, dp[i])
 
-print(dp)
+# print(dp)
 
 if dp[m] != 10005:
     print("Yes")
