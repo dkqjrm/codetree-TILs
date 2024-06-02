@@ -9,4 +9,8 @@ for w, v in array:
         if i - w >= 0 and dp[i - w] != -1:
             dp[i] = max(dp[i - w] + v, dp[i])
 
-print(dp[m])
+num = max(dp[:m])
+if num != -1:
+    print(num)
+else:
+    print(0)
