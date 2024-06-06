@@ -3,7 +3,7 @@ array = list(map(int, input().split()))
 # 한 번에 정확히 1계단 혹은 2계단 단위로 올라갈 수 있음.
 # 그런데 계단을 1개씩 올라가는건 최대 3번만 하고 싶음.
 
-dp = [[-100000] * 3 for _ in range(n)]
+dp = [[-1e12] * 3 for _ in range(n)]
 
 # dp[i] = max(dp[i - 1], dp[i - 2]) + array[i]
 # 인데, 여기에 j를 추가해서 1번씩 몇번이나 뛰었는지 확인을 해야 할 것 같음.
