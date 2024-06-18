@@ -17,7 +17,7 @@ for x1 in range(n):
                 flag = True
                 for i in range(x1, x2 + 1):
                     for j in range(y1, y2 + 1):
-                        if array[i][j] < 0:
+                        if array[i][j] <= 0:
                             flag = False
                             break
                 size = ((x2 - x1) + 1) * ((y2 - y1) + 1)
